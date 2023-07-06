@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="UTF-8">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="img/logo.jpg" alt="Logo de la empresa">
+        </div>
+        <ul class="nav-links">
+            <li><a href="Index.html">Inicio</a></li>
+        </ul>  
+        <a class="btn" href="Index.html"><button>Cerrar Sesión</button></a>
+    </header>
+
+  <div class="content">
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Crear Cuenta</h1>
+                <input type="text" placeholder="Nombre" id="txtNombre" />
+                <input type="text" placeholder="Apellido Paterno" id="txtAP" />
+                <input type="text" placeholder="Apellido Materno" id="txtAM"/>
+                <input type="email" placeholder="Correo Electrónico" id="txtemail" />
+                <input type="password" placeholder="Contraseña" id="txtpass"/>
+                <input type="file" id="imagen" accept="image/*" style="display: none;">
+                <label for="imagenes">Seleccionar imágenes:</label>
+                <input type="file" id="imagenes" name="imagenes" multiple>
+                <img id="imagen-preview" src="" alt="Vista previa de la imagen" class="img-placeholder">
+                <table>
+                    <tr>
+                      <td>
+                        <input type="radio" id="rdnCliente" name="Tipo" placeholder="Cliente">
+                        <label for="Cliente">Cliente</label>
+                      </td>
+                      <td>
+                        <input type="radio" id="rdnTrabajador" name="Tipo" placeholder="Trabajador">
+                        <label for="Trabajador">Trabajador</label>
+                      </td>
+                    </tr>
+                </table>
+                <button id="btnRegistro" style="display: none;">Registrarse</button>
+            </form>
+        </div>
+        
+        <div class="form-container sign-in-container">
+            <form action="#" id="loginForm">
+                <h1>Iniciar Sesión</h1>
+                <input type="email" id="correo" placeholder="Email" />
+                <input type="password" id="contrasena" placeholder="Password" />
+                <a href="#">Olvidaste tu contraseña?</a>
+                <button id="btnSesion" type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bienvenido</h1>
+                    <p>Ingresa tus datos para registrarte en nuestro sistema</p>
+                    <button class="ghost" id="signIn">Iniciar sesión</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hola, ¡Bienvenido!</h1>
+                    <p>Ingresa tus datos para iniciar sesión</p>
+                    <button class="ghost" id="signUp" href="perfil.html">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
+

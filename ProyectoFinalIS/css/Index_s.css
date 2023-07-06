@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #606C5D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+.logo img {
+    height: 30px;
+  }
+  
+.user-icon img {
+    height: 30px;
+  }
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background: #FFF4F4;
+    font-family: sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title{
+    text-align: center;
+    font-size: 40px;
+    color: #6a6a6a;
+    margin-top: 100px;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding-top:50px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.container .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img{
+    width: 330px;
+    height: 220px;
+}
+
+
+.container .card h4{
+    font-weight: 600;
+}
+
+.container .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+/*---------------ventana emergente------------------------------------*/
+
+
+.btn-open-popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #D90C43;
+    display: block;
+    background: white;
+    padding: 20px 50px;
+    border-radius: 50px;
+}
+
+
+.container-all{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    padding: 40px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+
+
+.container-all:target{
+    margin-top: -50px;
+    width: 100%;
+    height: 100%;
+    background: rgba(67, 67, 67, 0.5);
+    visibility: visible;
+    opacity: 1;
+}
+
+.container-all:target .popup{
+    top: 20%; /*Ajustar la posicion de la pantalla emergente*/
+    left: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+    visibility: visible;
+}
+
+
+.popup{
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    background: white;
+    visibility: hidden;
+    top: -80%;
+    left: -80%;
+    transform: rotate(90deg) translate(-180%, 230%);
+    transition: all 600ms;
+}
+
+
+.img{
+    width: 40%;
+    background-image: url(/img/logo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container-text{
+    width: 60%;
+    padding: 50px;
+    overflow-y: auto;
+    
+}
+
+.container-text .dejarComentario{
+    text-align: center;
+}
+
+.container-text h1{
+    font-size: 30px;
+}
+
+.container-text p{
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+.btn-close-popup{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    padding: 10px;
+    background: rgb(159, 237, 151);
+    color: white;
+    border-radius: 50%;
+    line-height: 10px;
+    align-content: center;
+}
+
+@media screen and (max-width: 900px){
+    .popup{
+        flex-direction: column;
+        height: 100%;
+        max-height: 800px;
+    }
+    
+    .img{
+        width: 100%;
+        height: 40%;
+    }
+    
+    .container-text{
+        width: 100%;
+        height: 60%;
+        padding: 80px;
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    .container-text{
+        padding: 20px;
+    }
+    
+    .container-text h1{
+        font-size: 20px;
+    }
+    
+    .container-text p{
+        font-size: 12px;
+    }
+}
+
+/*------------estilos navbar------------------------------------------------*/
+
+
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0 20px;    
+}
+
+.nav-links li:hover{
+    transform: scale(1.1);
+}
+
+.nav-links a{
+    font-size: 700;
+    color: #eceff1;
+    text-decoration: none;    
+}
+
+.nav-links li a:hover{
+    color: #ffbc0e;
+}
+
+.btn button{
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.btn button:hover {
+    transform: scale(1.1);
+    background-color: #ffbc0e;
+}
+
+.card .btn button:hover {
+    transform: scale(1.1);
+    background-color:#606C5D;
+    color: #FFF4F4;
+}
+
+.header .btn button:hover{
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+
+.comentarios{
+    border: 1px solid rgba(0, 0, 0, 0.382);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.dejarComentario{
+    position: relative;
+}
+
+.dejarComentario textarea {
+    width: 100%;
+    height: 70px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid rgba(0, 0, 0, 0.382);
+    border-radius: 4px;
+}
+  
+.dejarComentario button {
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.dejarComentario button:hover {
+    transform: scale(1.1);
+    background-color: #606C5D;
+    color: #FFF4F4;
+}
+
+/*---------------------------------------Estilos buscador----------------*/
+
+.contenido {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    height: 40px;
+    text-align: center;
+    background-color: #6a8c62be;
+    padding: 20px;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+
+.contenido button{
+    margin-left: 20px;
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.contenido button:hover{
+    transform: scale(1.1);
+}
+  
+  .buscador {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+
+  .selectCategoria {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    transition: all 0.3s ease;
+    width: 200px;
+  }
+  
+  .selectCategoria:hover {
+    transform: scale(1.1);
+    background-color: #e0e0e0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .selectCategoria:focus {
+    outline: none;
+    background-color: #e0e0e0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .selectCategoria option {
+    padding: 8px 16px;
+  }
+
+
+
+
+
+
+  /*---------------------------estilos formulario de actualizar datos de la publicacion-------------------*/
+
+
+  .container-text {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="tel"], input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    box-shadow: 2px 7px 15px #888888;
+  }
+  
+  .container-text button {
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 30%;
+    margin-top: 15px;
+    box-shadow: 5px 10px 18px #888888;
+  }
+  
+ 
+  /*-------------------boton agregar publicacion------------------*/
+
+
+  .btnAgregarP{
+    width: 50%; 
+  }
+
+  .tituloPublicacione{
+    width: 50%;
+  }
+
+  /*---------------------------------------Estilos slider--------------------------------*/
+
+ .slider{
+    margin-top: 30%;
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+  }
+  .slider ul{
+      display: flex;
+      animation: cambio 8s infinite alternate linear;
+      width: 400%;
+  }
+  .slider li{
+      width: 100%;
+      list-style: none;
+  }
+  .slider .imgSlider{
+      width: auto;
+      height: auto;
+  }
+  @keyframes cambio{
+      0%{margin-left: 0;}
+      20%{margin-left: 0;}
+      
+      25%{margin-left: -100%;}
+      45%{margin-left: -100%;}
+      
+      50%{margin-left: -200%;}
+      70%{margin-left: -200%;}
+      
+      75%{margin-left: -300%;}
+      100%{margin-left: -300%;}
+  }
+  @media only screen and (min-width:320px) and (max-width:768px){
+  .slider, .slider ul, .slider img{
+      height: 100vh;
+  }
+  }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <link rel="stylesheet" href="./css/Index_s.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-RE4MdqLJiAFzRQnZH6ZAhmuFW6IW7Pe2Cyzvp9K7VYwx6InwNEsgpMw1kblK+nzGgI4ibYzZKu6fUNhJKCTcAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="img/logo.jpg" alt="Logo de la empresa">
+        </div>
+        <ul class="nav-links">
+            <li><a href="perfilTrabajador.html">Mi cuenta</a></li>
+        </ul>  
+        <a class="btn" href="Login.html"><button>Login</button></a>
+    </header>
+    
+    <div class="contenido">
+        <div class="tituloPublicaciones">
+            <h1>Mis publicaciones</h1>
+        </div>
+        <div class="btnAgregarP">
+            <button type="button" onclick="location.href='#modal2'">
+                Agregar publicacion         
+            </button>
+        </div>
+    </div>
+
+     
+    
+    <div class="container">
+       
+        <div class="card">
+            <img src="img/logo.jpg">
+            <h3>Joel Gurrola</h3>
+            <h4>Categoria: </h4>
+            <a class="btn"><button type="button" onclick="location.href='#modal'">Editar publicacion</button></a>
+        </div>
+        
+
+
+        <div class="container-all" id="modal"> 
+            <div class="popup">
+
+
+                <div class="container-text">
+                    <form >
+                        <label for="oficio">OFICIO:</label>
+                        <input type="text" id="oficio" ><br>
+    
+                        <label for="descripcion">DESCRIPCION:</label>
+                        <input type="text" id="descripcion" required><br>
+
+                        <label for="Precio">PRECIO:</label>
+                        <input type="text" id="Precio" required><br>
+
+                         <label for="disponible">DISPONIBLE:</label>
+                        <input type="text" id="oficio" required><br>    
+
+                        <a class="btn"><button onclick="validarFormulario()">Guardar</button></a>
+                      </form>
+                </div>
+                <a href="#" class="btn-close-popup">X</a>
+            </div>
+            
+        </div>
+
+
+
+        <!------------------------------------------------Agregar publicacion------------------>
+        
+
+        <div class="container-all" id="modal2"> 
+            <div class="popup">
+
+
+                <div class="container-text">
+                    <form >
+                        
+                        <label for="oficio">OFICIO:</label>
+                        <input type="text" id="oficio" ><br>
+
+                        <label for="telefono">TELEFONO:</label>
+                        <input type="text" id="descripcion" required><br>
+
+                        <label for="correo">CORREO:</label>
+                        <input type="text" id="correo" required><br>
+
+                        <label for="disponible">DISPONIBLE:</label>
+                        <input type="text" id="disponible" required><br>
+
+                        <label for="descripcion">DESCRIPCION:</label>
+                        <input type="text" id="descripcion" required><br>
+
+                        <label for="ciudad">CIUDAD:</label>
+                        <input type="text" id="ciudad" required><br>
+
+                        <label for="Precio">PRECIO:</label>
+                        <input type="text" id="Precio" required><br>
+                        
+                        <label for="imagenes">Seleccionar imágenes:</label>
+                        <input type="file" id="imagenes" name="imagenes" multiple>
+
+                        <a class="btn"><button onclick="validarFormulario()">Guardar</button></a>
+                      </form>
+                </div>
+                <a href="#" class="btn-close-popup">X</a>
+            </div>
+            
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

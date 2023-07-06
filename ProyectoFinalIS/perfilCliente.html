@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apock web design</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/perfil_s.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+          <img src="./img/logo.jpg" alt="Logo de la empresa">
+        </div>
+        <ul class="nav-links">
+            <li><a href="Trabajos.html">Inicio</a></li>
+            <li><a href="soporteTecnico.html">Soporte técnico</a></li>
+        </ul>  
+        <a class="btn" href="Login.html"><button>Login</button></a>
+    </header>
+
+   
+  <section class="seccion-perfil-usuario">
+    <div class="perfil-usuario-header">
+      <div class="perfil-usuario-avatar">
+        <img  id="imagen-preview" alt="img-avatar">
+        <input type="file" id="imagen" accept="image/*" style="display: none;">
+        <label for="imagen" class="boton-avatar">
+          <i class="far fa-id-badge centrar-icono"></i>
+        </label>
+      </div>
+    </div>
+    <div class="perfil-usuario-body">
+      <div class="perfil-usuario-bio">
+        <h3 id="hNombre" class="titulo"></h3>
+      </div>
+      <div class="perfil-usuario-footer">
+        <div class="contList">
+          <div class="divListas">
+            <ul class="lista-datos">
+              <li><i class="icono fas fa-calendar-alt"></i> FECHA DE NACIMIENTO: <span id="fecha-nacimiento"></span></li>
+              <li><i class="icono fas fa-phone-alt"></i> TELÉFONO: <span id="telefono"></span></li>
+            </ul>
+          </div>
+
+          <div class="divListas">
+            <ul class="lista-datos">
+              <li><i class="icono fas fa-globe"></i>ESTADO: <span id="estado"></span></li>
+              <li><i class="icono fas fa-city"></i>MUNICIPIO / ALCALDÍA:<span id="municipio"></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="divBtnGuardar">
+          <a class="btn"><button type="button" onclick="location.href='#modal'">Editar Perfil</button></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--++++++++++++++++++++++++++++++Modal cambio de datos +++++++++++++++++++++++++++++++++++-->
+
+  <div class="container-all" id="modal">
+
+    <div class="popup">
+      <div class="img"></div>
+      <div class="container-text">
+        <form>
+          <label for="Fecha">FECHA DE NACIMIENTO:</label>
+          <input type="date" id="txtfecha"  required>
+
+          <label for="estado">ESTADO:</label>
+          <input type="text" id="txtestado" required><br>
+          
+          <label for="municipio">MUNICIPIO/ALCALDÍA:</label>
+          <input type="text" id="txtmunicipio" required><br>
+
+
+          <label for="telefono">TELÉFONO:</label>
+          <input type="tel" id="txttelefono"  required><br>
+
+          <a class="btn"><button type="button" id="btnActualizar">Guardar</button></a>
+        </form>
+      </div>
+      <a href="#" class="btn-close-popup">X</a>
+    </div>
+  </div>
+</body>
+
+<script src="js/perfilC.js">
+  </script>
+
+
+</html>
+

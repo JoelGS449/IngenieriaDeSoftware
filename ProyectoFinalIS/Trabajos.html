@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <link rel="stylesheet" href="./css/Index_s.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-RE4MdqLJiAFzRQnZH6ZAhmuFW6IW7Pe2Cyzvp9K7VYwx6InwNEsgpMw1kblK+nzGgI4ibYzZKu6fUNhJKCTcAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="img/logo.jpg" alt="Logo de la empresa">
+        </div>
+        <ul class="nav-links">
+            <li><a href="perfilCliente.html">Mi cuenta</a></li>
+        </ul>  
+        <a class="btn" href="Login.html"><button>Login</button></a>
+    </header>
+    
+    <div class="contenido">
+        <div class="buscador">
+          <select class="selectCategoria">
+            <option value="">Todas las categorías</option>
+            <option value="plomeria">Plomería</option>
+            <option value="albanileria">Albañilería</option>
+            <option value="electricista">Electricista</option>
+            <option value="carpinteria">Carpintería</option>
+            <option value="herreria">Herrería</option>
+          </select>
+          <button id="botonBuscar">Buscar</button>
+        </div>
+    </div>
+
+     
+    
+    <div class="container">
+       
+        <div class="card">
+            <img src="img/logo.jpg">
+            <h3>Joel Gurrola</h3>
+            <h4>Categoria: </h4>
+            <a class="btn"><button type="button" onclick="location.href='#modal'">Informacion</button></a>
+        </div>
+        
+        <div class="card">
+            <img src="img/logo.jpg">
+            <h3>Joel Gurrola</h3>
+            <h4>Categoria: </h4>
+            <a class="btn"><button type="button" onclick="location.href='#modal'">Informacion</button></a>
+        </div>
+
+        <div class="card">
+            <img src="img/logo.jpg">
+            <h3>Joel Gurrola</h3>
+            <h4>Categoria: </h4>
+            <a class="btn"><button type="button" onclick="location.href='#modal'">Informacion</button></a>
+        </div>
+
+        <div class="card">
+            <img src="img/logo.jpg">
+            <h3>Joel Gurrola</h3>
+            <h4>Categoria: </h4>
+            <a class="btn"><button type="button" onclick="location.href='#modal'">Informacion</button></a>
+        </div>
+
+        <div class="container-all" id="modal"> 
+            <div class="popup">
+                <div class="imgSliders">
+                    <div class="slider">
+                        <ul>
+                            <li>
+                                <img src="img/albañil1.jpeg">
+                            </li>
+                            <li>
+                                <img src="https://s1.1zoom.me/big0/160/354276-admin.jpg">
+                            </li>
+                            <li>
+                                <img src="https://mobimg.b-cdn.net/pic/v2/gallery/preview/goroda-pejzazh-ulicy-22228.jpg">
+                            </li>
+                            <li>
+                                <img src="http://2.bp.blogspot.com/-dNtt1v-HAOE/UFdRpT_pY9I/AAAAAAAABXw/gBzxja1td3Y/s1600/fondos-escritorio-ciudades-1280.jpg">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-text">
+                    <h1>Joel Gurrola</h1>
+                    
+                    <p>CATEGORIA: </p>
+                    <p>OFICIO:</p>
+                    <p>TELÉFONO:</p>
+                    <p>CORREO:</p>
+                    <p>DISPONIBLE:</p>
+                    <p>DESCRIPCIÓN:</p>
+                    <p>CIUDAD:</p>
+                    <p>CALIFICACIÓN:</p>
+                    <p>PRECIO:</p>
+
+                    <div class="comentarios">
+                        <h3>Referencias:</h3>
+                        <br>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat quia minima nostrum impedit, ad voluptas.</p>
+                    </div>
+                    <br>
+                    <div class="dejarComentario">
+                        <textarea id="comentario" placeholder="Deja tu comentario aquí"></textarea>
+                        <br>
+                        <button id="enviar">Enviar</button>
+                    </div>
+                    
+                </div>
+
+                
+                <a href="#" class="btn-close-popup">X</a>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    
+</body>
+</html>
